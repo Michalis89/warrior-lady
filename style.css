@@ -101,13 +101,11 @@ input, select {
     vertical-align:middle;
 }
 /*meta to reset o kwdikas mou*/
-header{
+main{
     width:100%;
-    height: 220px;
-    position: absolute;
-    top:0;
+    height: 100px;
 }
-header h1{
+main h1{
     font-size: 25px;
     color: #732f2f;
     font-family: sans-serif;
@@ -115,7 +113,7 @@ header h1{
     top: 180px;
     left:190px;
 }
-header h2{
+main h2{
     font-size: 25px;
     color: #732f2f;
     font-family: sans-serif;
@@ -123,7 +121,7 @@ header h2{
     top: 220px;
     left: 190px;
 }
-header hr{
+main hr{
     display: block;
     border-width: 3px;
     border-color: #732f2f;
@@ -131,7 +129,7 @@ header hr{
     margin-right: 665px;
     margin-top:210px;
 }
-header img {
+main img {
     height: 200px;
     position: absolute;
     top: 40px;
@@ -140,7 +138,6 @@ header img {
     border-width: 3px;
     color: black;
 }
-
 header nav ul{
     position: absolute;
     top: 20px;
@@ -160,13 +157,6 @@ header nav ul li a{
 header nav ul li a:hover {
     color: #c2a35c;
 }
-header nav ul li a:visited{
-    color:white ;
-}
-main{
-    width: 100%;
-    height: 100%;
-}
 #imgs img{
     width:100%;
     height:100%;
@@ -176,8 +166,7 @@ main{
     transition: 1s;
     visibility:hidden;
 }
-#Snav
-{
+#Snav{
     display:block;
     width:100%;
     height:100%;
@@ -185,14 +174,12 @@ main{
     top:0;
     left:0;
 }
-#SnavUp
-{
+#SnavUp{
     display:inline-block;
     width:100%;
     height:20%;
 }
-#Scircles
-{
+#Scircles{
     display:inline-block;
     width:4%;
     height:8%;
@@ -200,8 +187,7 @@ main{
     margin-top:1%;
     float:left;
 }
-#Scircles ul
-{
+#Scircles ul{
     margin:0;
     float:left;
     display:block;
@@ -232,8 +218,7 @@ main{
     bottom:0;
     left:0;
 }
-#SnavBottom p
-{
+#SnavBottom p{
     font:normal 200% Arial;
     color:#fff;
     position:absolute;
@@ -241,4 +226,9 @@ main{
     left:25px;
     margin-left:3%;
     visibility:hidden;
+}
+.ddwl{
+    background-image: url(img/Trundle.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
