@@ -2,37 +2,132 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Warrior Lady</title>
+    <title>DD Warrior Lady</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="Content-Language" content="el">
+    <meta http-equiv="Content-Language" content="el">
+    <script>
+      var nrImg = 5;
+        var IntSeconds = 30;
+
+        function Load()
+        {
+            nrShown = 0;
+            Vect = new Array(nrImg + 10);
+            Vect[0] = document.getElementById("Img1");
+            Vect[0].style.visibility = "visible";
+
+            document.getElementById("S" + 0).style.visibility = "visible";
+
+            for (var i = 1; i < nrImg; i++)
+            {
+                Vect[i] = document.getElementById("Img" + (i + 1));
+                document.getElementById("S" + i).style.visibility = "visible";
+            }
+
+            document.getElementById("S" + 0).style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+            document.getElementById("SP" + nrShown).style.visibility = "visible";
+
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        function Timer()
+        {
+            nrShown++;
+            if (nrShown == nrImg)
+                nrShown = 0;
+            Effect();
+        }
+        function next()
+        {
+            nrShown++;
+            if (nrShown == nrImg)
+                nrShown = 0;
+            Effect();
+
+            clearInterval(mytime);
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        function prev()
+        {
+            nrShown--;
+            if (nrShown == -1)
+                nrShown = nrImg -1;
+            Effect();
+
+            clearInterval(mytime);
+            mytime = setInterval(Timer, IntSeconds * 1000);
+        }
+        function Effect()
+        {
+            for (var i = 0; i < nrImg; i++)
+            {
+                Vect[i].style.opacity = "0";
+                Vect[i].style.visibility = "hidden";
+
+                document.getElementById("S" + i).style.backgroundColor = "rgba(0, 0, 0, 0.70)";
+                document.getElementById("SP" + i).style.visibility = "hidden";
+            }
+            Vect[nrShown].style.opacity = "1";
+            Vect[nrShown].style.visibility = "visible";
+            document.getElementById("S" + nrShown).style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+            document.getElementById("SP" + nrShown).style.visibility = "visible";
+            }
+    </script>
 </head>
-<body>
+<body onload="Load()">
+    <div id="slider">
+        <div id="imgs">
+            <img id="Img1" src="img/Trundle.jpg"/>
+            <img id="Img2" src="img/Karma.jpg"/>
+            <img id="Img3" src="img/Jayce.jpg"/>
+            <img id="Img4" src="img/Jax.jpg"/>
+            <img id="Img5" src="img/Fiora.jpg"/>
+        </div>
+        <div id="Snav">
+            <div id="SnavUp">
+                <div id="Scircles">
+                    <ul>
+                        <li id="S0"></li>
+                        <li id="S1"></li>
+                        <li id="S2"></li>
+                        <li id="S3"></li>
+                        <li id="S4"></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="SnavBottom">
+                <p id="SP0">Trundle</p>
+                <p id="SP1">Karma</p>
+                <p id="SP2">Jayce</p>
+                <p id="SP3">Jax</p>
+                <p id="SP4">Fiora</p>
+            </div>
+        </div>
+    </div>
     <header>
         <!--fwtografia onoma navbar(gallery video home stas istoriko ) idiothta-->
-        <h1>Φόρης "Warrior Lady" Κλειώτης</h1>
+        <h1>Φόρης "DD Warrior Lady" Κλειώτης</h1>
         <a href="http://lol.gamepedia.com/Warrior_Lady" target="_blank"><img src="img/WL.jpg"></a>
-        <a href="http://eune.leagueoflegends.com/en" target="_blank"><img class="cover" src="img/lol.jpg"></a>
         <hr>
-        <h2>Top Laner, Master EUW </h2>
+        <h2>Top-Laner, Master EU West </h2>
         <nav>
             <ul>
-                <li><a href="index.html">Αρχική</li>
-                <li><a href="warriorlady.html">Warrior Lady</li>
-                <li><a href="stats.html">Στατιστικά</li>
-                <li><a href="photos.html">Φωτογραφίες</li>
-                <li><a href="video.html">Βίντεο</li>
+                <li><a href="index.html">Αρχική</li></a>
+                <li><a href="warriorlady.html">DD Warrior Lady</li></a>
+                <li><a href="stats.html">Στατιστικά</li></a>
+                <li><a href="photos.html">Φωτογραφίες</li></a>
+                <li><a href="video.html">Βίντεο</li></a>
             </ul>
         </nav>
-
-
     </header>
+    <!-- diakriseis omades se divs account (lolking)  -->
     <main>
-        <!-- diakriseis omades se divs account (lolking)  -->
+
 
     </main>
     <footer>
         <!-- social media nav bar -->
 
     </footer>
+
 </body>
 </html>
