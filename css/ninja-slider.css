@@ -46,7 +46,7 @@
 
 #ninja-slider .slider-inner {
     max-width:600px;
-    margin:0 auto;/*center-aligned */
+    margin:0 auto;
     font-size:0px;
     position:relative;
     box-sizing:border-box;
@@ -85,16 +85,11 @@
 }
 
 
-
-/* --------- slider image ------- */
 #ninja-slider .ns-img {
     background-color:rgba(0,0,0,0.3);
-    background-size:contain;/*Note: If transitionType is zoom, it will be overridden to cover.*/
-
-    /*decorate border*/
+    background-size:contain;
     box-shadow: inset 0 0 2px rgba(255,255,255,.3);
     border-radius:6px;
-
     cursor:default;
     display:block;
     position: absolute;
@@ -104,8 +99,6 @@
     background-position:center center;
 }
 
-
-/*---------- Captions -------------------*/
 #ninja-slider .caption {
     padding:20px 40px;
     margin:auto;
@@ -117,7 +110,6 @@
     font-size:11px;
     color:rgba(255,255,255,0.2);
     background:none;
-    /*background:rgba(0,0,0,0.12);*/
     position:absolute;
     box-sizing:border-box;
 }
@@ -132,7 +124,6 @@
     transition:bottom 1.3s, opacity 1s;
 }
 
-/*The cap1 of the current slide */
 #ninja-slider li[class*='-'] .cap1 {
     opacity:1;
     bottom:20%;
@@ -145,14 +136,10 @@
     transition-delay: 1s;
 }
 
-/*The cap2 of the current slide */
 #ninja-slider li[class*='-s'] .cap2 {
     bottom:10%;
 }
 
-
-/* ---------Arrow buttons ------- */
-/* The arrow button id should be: slider id + ("-prev", "-next", and "-pause-play") */
 #ninja-slider-pause-play { display:none;}
 
 #ninja-slider-prev, #ninja-slider-next
@@ -163,9 +150,9 @@
     height:56px;
     line-height:56px;
     top: 50%;
-    margin-top:-51px;/*pager's height should also be counted*/
+    margin-top:-51px;
     background-color:rgba(0,0,0,0.4);
-    background-color:#ccc\9;/*IE8 hack*/
+    background-color:#ccc\9;
     backface-visibility:hidden;
     color:white;
     overflow:hidden;
@@ -186,15 +173,13 @@
     opacity:1;
 }
 
-
 #ninja-slider-prev {
-    left: -42px; /*set it with a positive value if .slider-inner does not have max-width setting.*/
+    left: -42px;
 }
 #ninja-slider-next {
     right: -42px;
 }
 
-/* arrows */
 #ninja-slider-prev::before, #ninja-slider-next::before {
     position: absolute;
     top: 17px;
@@ -221,18 +206,12 @@
     left:4px;
 }
 
-
-/*pagination num within the arrow buttons*/
 #ninja-slider-prev div, #ninja-slider-next div {display:none;}
 
-
-/*------ pager(nav bullets) ------*/
-/* The pager id should be: slider id + "-pager" */
-/* #ninja-slider-pager { display:none;}*/
 #ninja-slider-pager
 {
-    padding-top:30px; /* set the distance away from the slider */
-    margin:0 auto; /* center align */
+    padding-top:30px;
+    margin:0 auto;
     text-align:center;
     display:table;
     font-size:0;
@@ -244,7 +223,7 @@
     width: 10px;
     height: 10px;
     background-color: #CCC;
-    font-size:0; /* Non-zero will show the index num */
+    font-size:0;
     margin:2px 6px;
     cursor:pointer;
     border-radius:10px;
@@ -270,15 +249,11 @@
     user-select: none;
 }
 
-
-/*Responsive settings*/
 @media only screen and (max-width:600px){
 
     #ninja-slider-prev, #ninja-slider-next, #ninja-slider-pager {
         display:none;
     }
-
-
     #ninja-slider li .cap1 {
         font-size:20px;
     }
