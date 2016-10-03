@@ -193,14 +193,14 @@
 }
 
 #ninja-slider-prev::before {
-    -ms-transform:rotate(-45deg);/*IE 9*/
+    -ms-transform:rotate(-45deg);
     -webkit-transform:rotate(-45deg);
     transform: rotate(-45deg);
     right:4px;
 }
 
 #ninja-slider-next::before {
-    -ms-transform:rotate(135deg);/*IE 9*/
+    -ms-transform:rotate(135deg);
     -webkit-transform:rotate(135deg);
     transform: rotate(135deg);
     left:4px;
