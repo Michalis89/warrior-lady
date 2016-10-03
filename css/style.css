@@ -300,6 +300,9 @@ body {
   top: 50px:
   left:250px;
 }
+#click{
+  padding-right: 0px;
+}
 /*slider*/
 #gallery h1{
   font-size: 26px;
