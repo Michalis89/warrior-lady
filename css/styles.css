@@ -45,6 +45,11 @@ a:focus {
   text-decoration: none;
   color: #1d9b6c;
 }
+
+ul, ol {
+  list-style: none;
+}
+
 .light {
   font-weight: 400;
 
