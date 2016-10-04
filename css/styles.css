@@ -176,50 +176,7 @@ ul, ol {
   color: white;
   background: rgba(255, 255, 255, 0.1);
 }
-.btn-circle i.animated {
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 1s;
-  -moz-transition-property: -moz-transform;
-  -moz-transition-duration: 1s;
-}
-.btn-circle:hover i.animated {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-}
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-@-moz-keyframes pulse {
-  0% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-  50% {
-    -moz-transform: scale(1.2);
-    transform: scale(1.2);
-  }
-  100% {
-    -moz-transform: scale(1);
-    transform: scale(1);
-  }
-}
+
 .content-section {
   padding-top: 100px;
 }
@@ -277,11 +234,7 @@ footer {
 footer p {
   margin: 0;
 }
-::-moz-selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-}
+
 ::selection {
   text-shadow: none;
   background: #fcfcfc;
@@ -290,16 +243,11 @@ footer p {
 img::selection {
   background: transparent;
 }
-img::-moz-selection {
-  background: transparent;
-}
-body {
-  webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
-}
+
 #music{
   position: absolute;
-  top: 50px:
-  left:250px;
+  top: 50px;
+  left: 250px;
 }
 
 /*slider*/
@@ -328,12 +276,17 @@ body {
   transform: translateZ(0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  will-change: width; }
-  @media only screen and (min-width: 1024px) {
-    .cd-slider-wrapper {
-      width: 50%; }
-      .cd-slider-active .cd-slider-wrapper {
-        width: 100%; } }
+  will-change: width; 
+}
+
+@media only screen and (min-width: 1024px) {
+  .cd-slider-wrapper {
+    width: 50%; 
+  }
+  .cd-slider-active .cd-slider-wrapper {
+    width: 100%; 
+  } 
+}
 
 .cd-slider {
   position: relative;
@@ -382,7 +335,8 @@ body {
 }
 @media only screen and (min-width: 1024px) {
       .cd-slider {
-      cursor: pointer; }
+        cursor: pointer; 
+      }
       .cd-slider::before {
         /* never visible - this is used in jQuery to check the current MQ */
         content: 'desktop'; }
@@ -416,13 +370,17 @@ body {
     visibility: hidden;
     -webkit-transition: opacity 0.4s 0s, visibility 0s 0.4s;
     -moz-transition: opacity 0.4s 0s, visibility 0s 0.4s;
-    transition: opacity 0.4s 0s, visibility 0s 0.4s; }
-    .cd-slider-active .cd-slider-navigation li, .cd-slider-active .cd-slider-pagination {
-      opacity: 1;
-      visibility: visible;
-      -webkit-transition: opacity 0.4s 0.4s, visibility 0s 0.4s;
-      -moz-transition: opacity 0.4s 0.4s, visibility 0s 0.4s;
-      transition: opacity 0.4s 0.4s, visibility 0s 0.4s; } }
+    transition: opacity 0.4s 0s, visibility 0s 0.4s; 
+  }
+  
+  .cd-slider-active .cd-slider-navigation li, .cd-slider-active .cd-slider-pagination {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.4s 0.4s, visibility 0s 0.4s;
+    -moz-transition: opacity 0.4s 0.4s, visibility 0s 0.4s;
+    transition: opacity 0.4s 0.4s, visibility 0s 0.4s; 
+  } 
+}
 .cd-slider-navigation li {
   position: absolute;
   z-index: 2;
